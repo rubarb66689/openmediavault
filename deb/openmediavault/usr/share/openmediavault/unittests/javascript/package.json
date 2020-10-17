@@ -1,23 +1,27 @@
 {
-	"name": "openmediavault",
-	"version": "1.0.0",
-	"license": "GPLv3",
-	"directories": {
-		"test": "tests"
-	},
-	"dependencies": {
-		"jest": "^23.6.0"
-	},
-	"devDependencies": {},
-	"scripts": {
-		"test": "jest --watchAll"
-	},
-	"jest": {
-		"setupFiles": [
-			"<rootDir>/setup.js"
-		],
-		"transformIgnorePatterns": [
-			"node_modules/"
-		]
-	}
+  "name": "openmediavault",
+  "version": "1.0.0",
+  "license": "GPLv3",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jest": "^24.0.0",
+    "snyk": "^1.414.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --watchAll",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/"
+    ]
+  },
+  "snyk": true
 }
